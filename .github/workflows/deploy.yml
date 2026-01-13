@@ -6,7 +6,6 @@ on:
     branches:
       - main # Trigger on pushes to main branch
 env:
-  TF_VAR_bucket_name: ${{ vars.S3_BUCKET }} # 👈 GitHub variable
   TF_VAR_region: ${{ vars.AWS_REGION }} # 👈 GitHub variable
 jobs:
   terraform-apply:
