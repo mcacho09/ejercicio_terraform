@@ -30,7 +30,7 @@ resource "aws_security_group" "nodejs_sg" {
 
 # 3. EC2 instance with user-data to install Node.js
 resource "aws_instance" "nodejs_app" {
-  ami             = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (update per region)
+  ami             = "ami-0156001f0548e90b1" # Amazon Linux 2 AMI (update per region)
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.nodejs_sg.name]
 
