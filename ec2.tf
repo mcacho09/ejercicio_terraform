@@ -1,10 +1,4 @@
 
-# 1. Key pair (so you can SSH in if needed)
-resource "aws_key_pair" "deployer" {
-  key_name   = "deployer-key"
-  public_key = file("~/.ssh/id_rsa.pub")
-}
-
 # 2. Security group (allow HTTP + SSH)
 resource "aws_security_group" "nodejs_sg" {
   name        = "nodejs-sg"
