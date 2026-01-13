@@ -32,7 +32,6 @@ resource "aws_security_group" "nodejs_sg" {
 resource "aws_instance" "nodejs_app" {
   ami             = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (update per region)
   instance_type   = "t2.micro"
-  key_name        = aws_key_pair.deployer.key_name
   security_groups = [aws_security_group.nodejs_sg.name]
 
   user_data = <<-EOF
