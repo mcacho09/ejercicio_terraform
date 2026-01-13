@@ -58,8 +58,11 @@ resource "aws_instance" "nodejs_app" {
               pm2 startup
               pm2 save
               EOF
+  tags = merge(
+    var.common_tags,
+    {
+      Name = "NodeJS-App-Server"
+    }
+  )
 
-  tags = {
-    Name = "NodeJS-App-Server"
-  }
 }

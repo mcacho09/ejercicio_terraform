@@ -1,9 +1,4 @@
 # variables.tf
-variable "bucket_name" {
-  description = "The name of the S3 bucket"
-  type        = string
-  default     = "mario-secure-bucket"
-}
 
 variable "region" {
   description = "AWS region to deploy resources"
@@ -12,11 +7,10 @@ variable "region" {
 }
 
 
-variable "tags" {
+variable "common_tags" {
   description = "Tags to apply to resources"
   type        = map(string)
   default = {
-    Environment = "dev"
-    Owner       = "Mario"
+    Owner = "Mario"
   }
 }
