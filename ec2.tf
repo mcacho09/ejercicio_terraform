@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
 
 # 1. Key pair (so you can SSH in if needed)
 resource "aws_key_pair" "deployer" {
